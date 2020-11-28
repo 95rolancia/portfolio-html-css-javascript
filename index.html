@@ -10,7 +10,7 @@
   <link rel="icon" type="image/ico" href="imgs/favicon.ico" />
   <script src="https://kit.fontawesome.com/8bdc7d2339.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Sunflower:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
   <script src="main.js" defer></script>
 </head>
@@ -43,7 +43,7 @@
   </section>
 
   <!-- About   -->
-  <section id="about" class="section">
+  <section id="about" class="section section__container">
     <h1>About</h1>
     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus debitis sed perferendis at voluptatum numquam
       laboriosam accusamus alias neque odit, obcaecati, architecto ea delectus, iusto quidem quaerat eos earum quam.</p>
@@ -68,9 +68,9 @@
       <div class="job">
         <img src="imgs/jobs/pusanlogo.jpg" alt="PNU logo" class="job__logo">
         <div class="job__description">
-        <div class="job__name">Pusan National University</div>
-        <div class="job__period">4 years</div>
-      </div>
+          <div class="job__name">Pusan National University</div>
+          <div class="job__period">4 years</div>
+        </div>
       </div>
       <div class="job">
         <img src="imgs/jobs/pusanlogo.jpg" alt="PNU logo" class="job__logo">
@@ -84,59 +84,67 @@
 
   <!-- Skills -->
   <section id="skills" class="section">
-    <h1>Skills</h1>
-    <h2>Skills & Attributes</h2>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eos asperiores magni sed repellendus ea
-      laboriosam alias! Veniam maiores nulla hic pariatur dolorem iste, ipsa assumenda magnam quam soluta est.</p>
-    <div class="skillset">
-      <div class="skillset__left">
-        <h3 class="skillset__title">Skills</h3>
-        <div class="skill">
-          <div class="skill__description">
-            <span>HTML</span>
-            <span>70%</span>
-            <div class="skill_bar">
-              <div class="skill_value"></div>
+    <div class="section__container">
+      <h1>Skills</h1>
+      <h2>Skills & Attributes</h2>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, eos asperiores magni sed repellendus ea
+        laboriosam alias! Veniam maiores nulla hic pariatur dolorem iste, ipsa assumenda magnam quam soluta est.</p>
+      <div class="skillset">
+        <div class="skillset__left">
+          <h3 class="skillset__title">Skills</h3>
+          <div class="skill">
+            <div class="skill__description">
+              <span>HTML</span>
+              <span>73%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 73%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>CSS</span>
+              <span>72%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 72%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>JavaScript</span>
+              <span>71%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 71%;"></div>
+            </div>
+          </div>
+          <div class="skill">
+            <div class="skill__description">
+              <span>React</span>
+              <span>40%</span>
+            </div>
+            <div class="skill__bar">
+              <div class="skill__value" style="width: 40%;"></div>
             </div>
           </div>
         </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>HTML</span>
-            <span>70%</span>
-            <div class="skill_bar">
-              <div class="skill_value"></div>
-            </div>
+        <div class="skillset__right">
+          <div class="tools">
+            <h3 class="tools__title">Tools</h3>
+            <ul class="tools__list">
+              <li><span>Visual Studio Code</span></li>
+              <li><span>Cmder</span></li>
+              <li><span>Notion</span></li>
+            </ul>
           </div>
-        </div>
-        <div class="skill">
-          <div class="skill__description">
-            <span>HTML</span>
-            <span>70%</span>
-            <div class="skill_bar">
-              <div class="skill_value"></div>
-            </div>
+          <div class="etc">
+            <h3 class="etc__title">Etc</h3>
+            <ul class="etc__list">
+              <li><span>R</span></li>
+              <li><span>Git</span></li>
+            </ul>
           </div>
-        </div>
-      </div>
-      <div class="skillset_right">
-        <div class="tools">
-          <h3 class="tools__title">Skills</h3>
-          <ul class="tools__list">
-            <li><span>R</span></li>
-            <li><span>React</span></li>
-            <li><span>VS Code</span></li>
-            <li><span>visual studio</span></li>
-            <li><span>python</span></li>
-          </ul>
-        </div>
-        <div class="etc">
-          <h3 class="etc__title">Skills</h3>
-          <ul class="etc__list">
-            <li><span>R</span></li>
-            <li><span>Git</span></li>
-            <li><span>tensorflow</span></li>
-          </ul>
         </div>
       </div>
     </div>
