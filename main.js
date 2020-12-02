@@ -25,6 +25,14 @@ homeContactBtn.addEventListener("click", () => {
   scrollIntoView("#contact");
 });
 
+// Make home transparent slowly
+const homeContainer = document.querySelector(".home__container");
+const homeContainerHeight = homeContainer.getBoundingClientRect().height;
+document.addEventListener("scroll", () => {
+  homeContainer.style.opacity =
+    (homeContainerHeight - window.scrollY) / homeContainerHeight;
+});
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
