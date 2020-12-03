@@ -135,14 +135,12 @@ p {
   margin: 0 4px;
   border-radius: 4px;
   cursor: pointer;
-}
-
-.navbar__menu__item.active {
-  border: 1px solid white;
+  border: 1px solid transparent;
 }
 
 .navbar__menu__item:hover {
   background-color: var(--color-dark-pink);
+  border-color: white;
 }
 
 .navbar__toggle-btn {
@@ -334,13 +332,13 @@ p {
   text-align: center;
 }
 
-.category__btn.active,
+.category__btn.selected,
 .category__btn:hover {
   background-color: var(--color-pink);
   color: var(--color-white);
 }
 
-.category__btn.active .category__count,
+.category__btn.selected .category__count,
 .category__btn:hover .category__count {
   opacity: 1;
   top: 0px;
@@ -368,6 +366,13 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__projects.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(10px);
 }
 
 .project {
@@ -379,6 +384,10 @@ p {
   height: 250px;
   margin: 2px;
   background-color: var(--color-light-white);
+}
+
+.project.invisible {
+  display: none;
 }
 
 .project__img {
@@ -493,6 +502,27 @@ p {
 .contact__links i:hover {
   transform: scale(1.1);
   color: var(--color-yellow);
+}
+
+.arrow-up {
+  /* display: none; */
+  width: 6rem;
+  height: 6rem;
+  position: fixed;
+  right: 2rem;
+  bottom: 4rem;
+  font-size: 5rem;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.arrow-up.visible {
+  pointer-events: auto;
+  opacity: 1;
 }
 
 /* For below 768px screen width */

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,7 +13,6 @@
   <link rel="stylesheet" href="style.css" />
   <script src="main.js" defer></script>
 </head>
-
 <body>
   <!-- Navbar -->
   <nav id="navbar">
@@ -157,62 +155,62 @@
       <h1>My work</h1>
       <h2>Projects</h2>
       <div class="work__categories">
-        <button class="category__btn active">All<span class="category__count">4</span></button>
-        <button class="category__btn">Front-end<span class="category__count">2</span></button>
-        <button class="category__btn">Back-end<span class="category__count">1</span></button>
-        <button class="category__btn">Mobile<span class="category__count">1</span></button>
+        <button class="category__btn selected" data-filter="*">All<span class="category__count">4</span></button>
+        <button class="category__btn" data-filter="front-end">Front-end<span class="category__count">2</span></button>
+        <button class="category__btn" data-filter="back-end">Back-end<span class="category__count">1</span></button>
+        <button class="category__btn" data-filter="mobile">Mobile<span class="category__count">1</span></button>
       </div>
       <div class="work__projects">
-        <a href="" class="project" target="black">
+        <a href="" class="project" target="black" data-type="front-end">
           <img class="project__img" src="imgs/projects/project1.png" alt="project1">
           <div class="project__description">
             <h3>Project1</h3>
             <span>Project1 Project1</span>
           </div>
         </a>
-        <a href="" class="project" target="black">
+        <a href="" class="project" target="black" data-type="front-end">
           <img class="project__img" src="imgs/projects/project2.png" alt="project2">
           <div class="project__description">
             <h3>Project2</h3>
             <span>Project2 Project2</span>
           </div>
         </a>
-        <a href="" class="project" target="black">
+        <a href="" class="project" target="black" data-type="front-end">
           <img class="project__img" src="imgs/projects/project3.png" alt="project3">
           <div class="project__description">
             <h3>Project3</h3>
             <span>Project3 Project3</span>
           </div>
         </a>
-        <a href="" class="project" target="black">
+        <a href="" class="project" target="black" data-type="front-end">
           <img class="project__img" src="imgs/projects/project4.png" alt="project4">
           <div class="project__description">
             <h3>Project4</h3>
             <span>Project4 Project4</span>
           </div>
         </a>
-        <a href="" class="project" target="black">
+        <a href="" class="project" target="black" data-type="back-end">
           <img class="project__img" src="imgs/projects/project5.png" alt="project5">
           <div class="project__description">
             <h3>Project5</h3>
             <span>Project5 Project5</span>
           </div>
         </a>
-        <a href="" class="project" target="black">
+        <a href="" class="project" target="black" data-type="back-end">
           <img class="project__img" src="imgs/projects/project6.png" alt="project6">
           <div class="project__description">
             <h3>Project6</h3>
             <span>Project6 Project6</span>
           </div>
         </a>
-        <a href="" class="project" target="black">
+        <a href="" class="project" target="black" data-type="mobile">
           <img class="project__img" src="imgs/projects/project7.png" alt="project7">
           <div class="project__description">
             <h3>Project7</h3>
             <span>Project7 Project7</span>
           </div>
         </a>
-        <a href="" class="project" target="black">
+        <a href="" class="project" target="black" data-type="mobile">
           <img class="project__img" src="imgs/projects/project8.png" alt="project8">
           <div class="project__description">
             <h3>Project8</h3>
@@ -264,6 +262,8 @@
     </div>
     <p class="contact__rights">2020 Rolancia - All rights reserved</p>
   </section>
-</body>
 
+  <!-- Arrow up -->
+  <button class="arrow-up"><i class="fas fa-arrow-up"></i></button>
+</body>
 </html>
