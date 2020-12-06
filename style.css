@@ -203,7 +203,7 @@ p {
 /* About */
 .about__majors {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   margin: 80px 0;
 }
 
@@ -510,14 +510,19 @@ p {
   color: var(--color-yellow);
 }
 
+.tistory {
+  width: 30px;
+  height: 30px;
+}
+
 .arrow-up {
   /* display: none; */
-  width: 6rem;
-  height: 6rem;
+  width: 3rem;
+  height: 3rem;
   position: fixed;
   right: 2rem;
-  bottom: 4rem;
-  font-size: 5rem;
+  bottom: 2rem;
+  font-size: 2.5rem;
   color: var(--color-white);
   background-color: var(--color-pink);
   border-radius: 50%;
