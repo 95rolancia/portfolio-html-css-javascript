@@ -12,10 +12,12 @@ document.addEventListener("scroll", () => {
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector(".navbar__menu");
 navbarMenu.addEventListener("click", (event) => {
-  const link = event.target.dataset.link;
-  if (link === null) {
+  const target =
+    event.target.nodeName === "LI" ? event.target : event.target.childNode;
+  if (target == null) {
     return;
   }
+  const link = target.dataset.link;
   navbarMenu.classList.remove("open");
   scrollIntoView(link);
 });
@@ -86,7 +88,71 @@ workBtnContainer.addEventListener("click", (event) => {
   }, 300);
 });
 
+// Auto select navbar menu
+const section = document.querySelectorAll("section");
+const sectionIds = [
+  "#home",
+  "#about",
+  "#skills",
+  "#work",
+  "#testimonials",
+  "#contact",
+];
+
+const sections = sectionIds.map((id) => document.querySelector(id));
+
+const navItems = sectionIds.map((id) =>
+  document.querySelector(`[data-link="${id}"]`)
+);
+
+let selectedNavIndex = 0;
+let selectedNavItem = navItems[0];
+
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.3,
+};
+
+const observerCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting && entry.intersectionRatio > 0) {
+      const index = sectionIds.indexOf(`#${entry.target.id}`);
+      // 스크롤링이 아래로 되어서 페이지가 올라옴
+      if (entry.boundingClientRect.y < 0) {
+        selectedNavIndex = index + 1;
+      } else {
+        selectedNavIndex = index - 1;
+      }
+    }
+  });
+};
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach((section) => observer.observe(section));
+
+window.addEventListener("wheel", () => {
+  if (window.scrollY === 0) {
+    selectedNavIndex = 0;
+  } else if (
+    Math.round(window.scrollY + window.innerHeight) >=
+    document.body.clientHeight
+  ) {
+    selectedNavIndex = navItems.length - 1;
+  }
+  selectNavItem(navItems[selectedNavIndex]);
+});
+
+// -----------------------
+
 function scrollIntoView(selector) {
   const scrollTo = document.querySelector(selector);
   scrollTo.scrollIntoView({ behavior: "smooth" });
+  selectNavItem(navItems[sectionIds.indexOf(selector)]);
+}
+
+function selectNavItem(selected) {
+  selectedNavItem.classList.remove("selected");
+  selectedNavItem = selected;
+  selectedNavItem.classList.add("selected");
 }

@@ -138,7 +138,8 @@ p {
   border: 1px solid transparent;
 }
 
-.navbar__menu__item:hover {
+.navbar__menu__item:hover,
+.navbar__menu__item.selected {
   background-color: var(--color-dark-pink);
   border-color: white;
 }
