@@ -42,13 +42,14 @@
 
 body {
   margin: 0;
+  background-color: #fafafa;
   font-family: "Noto Sans KR", sans-serif;
   cursor: default;
 }
 
 a {
   text-decoration: none;
-  color: var(--color-white);
+  color: var(--color-light-white);
 }
 
 ul {
@@ -110,7 +111,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-dark-pink);
+  background-color: #042133;
 }
 
 .navbar__logo {
@@ -124,6 +125,7 @@ p {
   width: 40px;
   height: 40px;
   margin-right: 5px;
+  border-radius: 50%;
 }
 
 .navbar__menu {
@@ -140,8 +142,9 @@ p {
 
 .navbar__menu__item:hover,
 .navbar__menu__item.selected {
-  background-color: var(--color-dark-pink);
-  border-color: white;
+  color: var(--color-black);
+  background-color: var(--color-light-white);
+  border-color: var(--color-black);
 }
 
 .navbar__toggle-btn {
@@ -159,7 +162,8 @@ p {
   padding: 40px;
   padding-top: 100px;
   text-align: center;
-  background: url("imgs/background.png") center/cover;
+  background: url("imgs/background2.jpg") center/cover;
+  background-attachment: fixed;
 }
 
 .home__avatar {
@@ -172,7 +176,7 @@ p {
 
 .home__title,
 .home__description {
-  color: white;
+  color: var(--color-light-white);
 }
 
 /* Animation */
@@ -187,17 +191,18 @@ p {
 }
 
 .home__contact {
-  color: var(--color-white);
+  color: var(--color-light-white);
   font-size: var(--font-regular);
   font-weight: var(--weight-bold);
   margin-top: 12px;
   padding: 8px 12px;
-  border: 2px solid var(--color-white);
+  border: 2px solid var(--color-light-white);
   border-radius: var(--size-border-radius);
 }
 
 .home__contact:hover {
-  background-color: var(--color-orange);
+  color: var(--color-black);
+  background-color: var(--color-light-white);
 }
 
 /* Section common */
@@ -213,6 +218,10 @@ p {
 }
 
 /* About */
+#about {
+  border-bottom: 1px solid black;
+}
+
 .about__majors {
   display: flex;
   justify-content: center;
@@ -280,7 +289,7 @@ p {
 /* Skills */
 
 #skills {
-  background-color: var(--color-yellow);
+  border-bottom: 1px solid black;
 }
 
 .skillset {
@@ -498,7 +507,9 @@ p {
 
 /* Contact */
 #contact {
-  background-color: var(--color-pink);
+  /* background-color: var(--color-pink); */
+  background: url("imgs/background2.jpg") center/cover;
+  background-attachment: fixed;
 }
 
 .contact__title,
