@@ -167,11 +167,23 @@ p {
   height: 250px;
   border: 1px solid pink;
   border-radius: 50%;
+  transition: all 300ms ease-in;
 }
 
 .home__title,
 .home__description {
   color: white;
+}
+
+/* Animation */
+.home__title {
+  max-width: fit-content;
+  border-right: solid 3px rgba(0, 255, 0, 0.75);
+  margin: 0 auto;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: animated-text 3s steps(29, end) 1s 1 normal both,
+    animated-cursor 1s steps(29, end) infinite;
 }
 
 .home__contact {
@@ -306,9 +318,12 @@ p {
 }
 
 .skill__value {
-  width: 80%;
   height: 3px;
   background-color: var(--color-orange);
+}
+
+.skill__value.move {
+  animation: skillbar 2s 1;
 }
 
 .skillset__right {
@@ -362,7 +377,7 @@ p {
   border-radius: 50%;
 
   position: absolute;
-  top: -20px;
+  top: -25px;
   right: 16px;
   opacity: 0;
   transition: all var(--animation-duration) ease-in;
@@ -516,7 +531,6 @@ p {
 }
 
 .arrow-up {
-  /* display: none; */
   width: 3rem;
   height: 3rem;
   position: fixed;

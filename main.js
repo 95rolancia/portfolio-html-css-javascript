@@ -24,7 +24,7 @@ navbarMenu.addEventListener("click", (event) => {
 
 // Navbar toggle button for small screen
 const navbarToggleBtn = document.querySelector(".navbar__toggle-btn");
-navbarToggleBtn.addEventListener("click", (event) => {
+navbarToggleBtn.addEventListener("click", () => {
   navbarMenu.classList.toggle("open");
 });
 
@@ -90,14 +90,7 @@ workBtnContainer.addEventListener("click", (event) => {
 
 // Auto select navbar menu
 const section = document.querySelectorAll("section");
-const sectionIds = [
-  "#home",
-  "#about",
-  "#skills",
-  "#work",
-  "#testimonials",
-  "#contact",
-];
+const sectionIds = ["#home", "#about", "#skills", "#work", "#contact"];
 
 const sections = sectionIds.map((id) => document.querySelector(id));
 
@@ -142,6 +135,26 @@ window.addEventListener("wheel", () => {
   }
   selectNavItem(navItems[selectedNavIndex]);
 });
+
+// skill animation observation
+const skills = document.querySelectorAll(".skill__value");
+const skillOption = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0,
+};
+const skillCallback = (entries, observer) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("move");
+    } else {
+      entry.target.classList.remove("move");
+    }
+  });
+};
+
+const skillObserver = new IntersectionObserver(skillCallback, skillOption);
+skills.forEach((skill) => skillObserver.observe(skill));
 
 // -----------------------
 
