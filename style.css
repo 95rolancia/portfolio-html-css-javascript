@@ -222,6 +222,49 @@ p {
   border-bottom: 1px solid var(--color-light-grey);
 }
 
+.about__hashtag {
+  color: #3f729b;
+}
+
+.about__pictures {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.about__pictures.anim-out {
+  opacity: 0;
+  transform: scale(0.96) translateY(10px);
+}
+
+.picture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 280px;
+  height: 250px;
+  margin: 2px;
+  background-color: var(--color-light-white);
+}
+
+.picture.invisible {
+  display: none;
+}
+
+.picture__img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.picture:hover .project__description {
+  opacity: 0.8;
+  transform: translateY(0px);
+}
+
 .about__majors {
   display: flex;
   justify-content: center;
