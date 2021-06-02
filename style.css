@@ -618,7 +618,7 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: transparent;
+    background-color: #042133;
   }
 
   .navbar__menu {
