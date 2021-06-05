@@ -162,7 +162,7 @@ p {
   padding: 40px;
   padding-top: 100px;
   text-align: center;
-  background: url("imgs/background2.jpg") center/cover;
+  background: url("../imgs/background2.jpg") center/cover;
   background-attachment: fixed;
 }
 
@@ -233,6 +233,37 @@ p {
   justify-content: center;
   opacity: 1;
   transition: all var(--animation-duration) ease-out;
+}
+
+.photo {
+  width: 12em;
+  height: 20em;
+}
+
+.photo.first {
+  background: center/cover url("../imgs/pictures/1.jpg");
+  transition: all 300ms ease-in;
+}
+
+.photo.second {
+  background: center/cover url("../imgs/pictures/2.png");
+  transition: all 300ms ease-in;
+}
+
+.photo.third {
+  background: center/cover url("../imgs/pictures/3.jpg");
+  transition: all 300ms ease-in;
+}
+
+.photo.forth {
+  background: center/cover url("../imgs/pictures/4.jpg");
+  transition: all 300ms ease-in;
+}
+
+.photo:hover {
+  width: 25em;
+  height: 25em;
+  background-size: center/100%;
 }
 
 .about__pictures.anim-out {
@@ -551,7 +582,7 @@ p {
 /* Contact */
 #contact {
   /* background-color: var(--color-pink); */
-  background: url("imgs/background2.jpg") center/cover;
+  background: url("../imgs/background2.jpg") center/cover;
   background-attachment: fixed;
 }
 
@@ -640,6 +671,16 @@ p {
   .section {
     padding: 16px;
     padding-top: 36px;
+  }
+
+  .photo {
+    width: 10em;
+    height: 20em;
+  }
+
+  .photo:hover {
+    width: 15em;
+    height: 15em;
   }
 
   .about__majors {
